@@ -14,56 +14,38 @@ config-version: 6
 stats:
   disable-saving: false
   forced-stats: {}
+settings:
+  netty-threads: 4
+  timeout-time: 60
+  restart-on-crash: true
+  restart-script: ./start.sh
+  player-shuffle: 0
+  user-cache-size: 1000
+  bungeecord: false
+  late-bind: false
+  sample-count: 12
+  filter-creative-items: true
+messages:
+  restart: Server is restarting
+  whitelist: You are not whitelisted on this server!
+  unknown-command: Unknown command. Type "/help" for help.
+  server-full: The server is full!
+  outdated-client: Outdated client! Please use {}
+  outdated-server: Outdated server! I'm still on {0}
 commands:
+  silent-commandblock-console: false
+  spam-exclusions:
+  - /skill
+  log: true
   tab-complete: 0
   replace-commands:
   - setblock
   - summon
   - testforblock
   - tellraw
-  silent-commandblock-console: false
-  spam-exclusions:
-  - /skill
-  log: true
-messages:
-  whitelist: You are not whitelisted on this server!
-  unknown-command: Unknown command. Type "/help" for help.
-  server-full: The server is full!
-  outdated-client: Outdated client! Please use {}
-  outdated-server: Outdated server! I'm still on {0}
-  restart: Server is restarting
-settings:
-  timeout-time: 60
-  restart-on-crash: true
-  restart-script: ./start.sh
-  netty-threads: 4
-  player-shuffle: 0
-  user-cache-size: 1000
-  bungeecord: false
-  sample-count: 12
-  filter-creative-items: true
-  late-bind: false
 world-settings:
   default:
     verbose: true
-    view-distance: 10
-    chunks-per-tick: 650
-    clear-tick-list: false
-    merge-radius:
-      exp: 3.0
-      item: 2.5
-    entity-activation-range:
-      animals: 32
-      monsters: 32
-      misc: 16
-    growth:
-      cactus-modifier: 100
-      cane-modifier: 100
-      melon-modifier: 100
-      mushroom-modifier: 100
-      pumpkin-modifier: 100
-      sapling-modifier: 100
-      wheat-modifier: 100
     anti-xray:
       enabled: true
       engine-mode: 1
@@ -84,6 +66,10 @@ world-settings:
       replace-blocks:
       - 1
       - 5
+    entity-activation-range:
+      animals: 32
+      monsters: 32
+      misc: 16
     entity-tracking-range:
       players: 48
       animals: 48
@@ -99,10 +85,24 @@ world-settings:
     max-bulk-chunks: 5
     max-entity-collisions: 8
     dragon-death-sound-radius: 0
+    growth:
+      cactus-modifier: 100
+      cane-modifier: 100
+      melon-modifier: 100
+      mushroom-modifier: 100
+      pumpkin-modifier: 100
+      sapling-modifier: 100
+      wheat-modifier: 100
     mob-spawn-range: 4
     nerf-spawner-mobs: false
     item-despawn-rate: 6000
+    merge-radius:
+      item: 2.5
+      exp: 3.0
     arrow-despawn-rate: 1200
     enable-zombie-pigmen-portal-spawns: true
     wither-spawn-sound-radius: 0
     zombie-aggressive-towards-villager: true
+    chunks-per-tick: 650
+    clear-tick-list: false
+    view-distance: 10
