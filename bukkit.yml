@@ -19,7 +19,7 @@ settings:
   update-folder: update
   ping-packet-limit: 100
   use-exact-login-location: false
-  plugin-profiling: false
+  plugin-profiling: true
   connection-throttle: 0
   query-plugins: true
   deprecated-verbose: default
